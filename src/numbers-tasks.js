@@ -201,15 +201,8 @@ function roundToPowerOfTen(num, pow) {
  *   16 => false
  *   17 => true
  */
-function isPrime(n) {
-  const i = Math.floor(n);
-  if (n <= 1) {
-    return false;
-  }
-  if (Math.sqrt(n) >= i && n % i === 0) {
-    return false;
-  }
-  return true;
+function isPrime(/* n */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -280,8 +273,8 @@ function getFibonacciNumber(index) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(n) {
-  return Math.sum(n);
+function getSumToN(/* n */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -310,11 +303,8 @@ function getSumOfDigits(/* num */) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(num) {
-  if (num === Math.sqrt(num) ** 2) {
-    return true;
-  }
-  return false;
+function isPowerOfTwo(/* num */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -388,7 +378,7 @@ function toFixed(number, fractionDigits) {
  * 12.345, 4   => '12.35'
  */
 function toPrecision(number, precision) {
-  return number.toFixed(precision);
+  return number.toPrecision(precision);
 }
 
 /**
@@ -488,8 +478,8 @@ function getIntegerOnString(str, base) {
  * 3.5      => false
  * 2 ** 53  => false
  */
-function isSafeInteger(number) {
-  return Number.isInteger(number);
+function isSafeInteger(/* number */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -564,7 +554,7 @@ function getIntegerPartNumber(number) {
  */
 function getSumOfNumbers(x1, x2, x3) {
   const sum = x1 + x2 + x3;
-  return sum;
+  return sum.toFixed(2);
 }
 
 /**
@@ -596,9 +586,9 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-  const minNam = Math.ceil(min);
-  const maxNam = Math.floor(max);
-  return Math.floor(Math.random() * (maxNam - minNam + 1)) + minNam;
+  const minNumber = Math.ceil(min);
+  const maxNumber = Math.floor(max);
+  return Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
 }
 
 /**
@@ -611,11 +601,8 @@ function getRandomInteger(min, max) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(a, b) {
-  if (BigInt(a) || BigInt(b)) {
-    return Math.sqrt(BigInt(a) ** 2 + BigInt(b) ** 2);
-  }
-  return Math.sqrt(a ** 2 + b ** 2);
+function getHypotenuse(/* a, b */) {
+  throw new Error('Not implemented');
 }
 
 /**
